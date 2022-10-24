@@ -22,6 +22,6 @@ export class Client {
   }
 
   get idade() {
-    return this.#nome
+    return this.#idade
   }
 }
