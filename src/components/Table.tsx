@@ -1,18 +1,20 @@
-import { Client } from "../core/Client"
+import { Client } from "../core/Client";
 
 interface TableProps {
-  clients: Client[]; 
+  clients: Client[];
 }
 
-export function Table(props: TableProps){
-  return (
-    <table>
-      <tr>
-        <th>Código</th>
-        <th>Nome</th>
-        <th>Idade</th>
-      </tr>
-
-    </table>
-  )
+export function Table(props: TableProps) {
+  function renderHead() {
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>;
+  }
+    return( 
+      <table>
+        {renderHead()}
+      </table>
+    )
 }
