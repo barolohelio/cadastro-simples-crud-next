@@ -19,7 +19,7 @@ export function useClients() {
   const [client, setClient] = useState<Client>(Client.empty());
   const [clients, setClients] = useState<Client[]>([]);
 
-  const {showTable, showForm, tableVisible, formVisible} = useTableOrForm();
+  const {showTable, showForm, tableVisible} = useTableOrForm();
 
   useEffect(getAll, []);
 
@@ -59,7 +59,6 @@ export function useClients() {
     selectClient,
     getAll,
     tableVisible, 
-    formVisible,
     showTable,
   }
 }

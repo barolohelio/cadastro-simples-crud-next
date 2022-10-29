@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-
-import { useClients } from "../hooks/useClients";
-
 import { Button } from "../components/Button";
 import { Form } from "../components/Form";
 import { Layout } from "../components/Layout";
 import { Table } from "../components/Table";
 import { Container } from "../components/Container";
+
+import { useClients } from "../hooks/useClients";
 
 export default function Home() {
   const { 
