@@ -47,6 +47,8 @@ export function Table(props: TableProps) {
               flex justify-center items-center
               text-green-600 rounded-full p-2 m-1
               hover:bg-purple-50
+              focus:bg-purple-50 outline-none focus:ring focus:ring-purple-50 
+              
             `}
           >
             {IconEdit}
@@ -61,6 +63,7 @@ export function Table(props: TableProps) {
               flex justify-center items-center
             text-red-500 rounded-full p-2 m-1
             hover:bg-purple-50
+            focus:bg-purple-50 outline-none focus:ring focus:ring-purple-50 
         `}>
             {IconTrash}
           </button>

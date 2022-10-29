@@ -1,3 +1,5 @@
+import { clsx } from 'clsx';
+
 interface ButtonProps {
   cor?: 'green' | 'blue' | 'gray'
   children: any
@@ -9,14 +11,16 @@ export function Button(props: ButtonProps){
   const cor = props.cor ?? 'gray'
   return (
     <button 
-    onClick={props.onClick}
-    className={`
+    onClick={props.onClick}     
+    className={clsx(`
       px-4 py-2 rounded-md 
-      bg-gradient-to-r from-${cor}-400 to-${cor}-700
       text-white
-      ${props.className}
-     `}>
-      {/* {console.log(cor)} */}
+      bg-gradient-to-r mb-4 from-${cor}-400 to-${cor}-700
+      focus:outline-none focus:ring focus:ring-white-300 
+      `,  
+      props.className
+     )}>
+      {console.log(cor)} 
       {props.children}
     </button>
   )
